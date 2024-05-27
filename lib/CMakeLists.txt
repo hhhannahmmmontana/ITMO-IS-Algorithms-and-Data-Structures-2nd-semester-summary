@@ -1,0 +1,8 @@
+add_library(dfs dfs.cpp)
+add_library(bfs bfs.cpp)
+add_library(find_cycle find_cycle.cpp)
+add_library(tps tps.cpp)
+add_library(kosaraju kosaraju.cpp)
+add_library(condensation condensation.cpp)
+add_library(find_hamiltonian_cycle find_hamiltonian_cycle.cpp)
+add_library(find_euler_cycle find_euler_cycle.cpp)
