@@ -13,6 +13,9 @@ std::vector<std::pair<unsigned long, unsigned long>> PrimaNaive(const std::vecto
                 v = u;
             }
         }
+        if (v == ULONG_MAX) {
+            break;
+        }
         used[v] = true;
         for (auto& e : graph[v]) {
             unsigned long u = e.first, w = e.second;
