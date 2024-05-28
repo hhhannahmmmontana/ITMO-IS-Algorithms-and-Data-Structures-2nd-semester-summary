@@ -3,16 +3,16 @@
 struct Edge {
     unsigned long a;
     unsigned long b;
-    unsigned long w;
+    int w;
 };
 
-std::pair<std::vector<unsigned long>, std::vector<unsigned long>> BellmanFord(unsigned long V, const std::vector<Edge>& graph, unsigned long start) {
-    std::vector<unsigned long> keys(V, ULONG_MAX);
+std::pair<std::vector<int>, std::vector<unsigned long>> BellmanFord(unsigned long V, const std::vector<Edge>& graph, unsigned long start) {
+    std::vector<int> keys(V, INT_MAX);
     std::vector<unsigned long> prev(V, ULONG_MAX);
     keys[start] = 0;
     for (int i = 0; i < V - 1; ++i) {
         for (auto& e : graph) {
-            if (keys[e.a] != ULONG_MAX && keys[e.b] > keys[e.a] + e.w) {
+            if (keys[e.a] != INT_MAX && keys[e.b] > keys[e.a] + e.w) {
                 keys[e.b] = keys[e.a] + e.w;
                 prev[e.b] = e.a;
             }
@@ -28,7 +28,7 @@ std::vector<unsigned long> FindNegativeCycle(unsigned long V, const std::vector<
     std::vector<unsigned long> negative_cycle;
     for (auto& e : graph) {
         // relaxation after V - 1 iteration == negative cycle
-        if (keys[e.a] != ULONG_MAX && keys[e.b] > keys[e.a] + e.w) {
+        if (keys[e.a] != INT_MAX && keys[e.b] > keys[e.a] + e.w) {
             unsigned long a = e.a;
             unsigned long b = e.b;
             // that's because we're not sure if the vertex is on the cycle, so we'll do it V times to be sure
