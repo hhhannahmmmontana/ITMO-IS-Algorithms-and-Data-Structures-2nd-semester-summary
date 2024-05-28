@@ -1,4 +1,4 @@
-# ITMO-IS-Algorithms-and-Data-Structures-4th-semester-summary
+# ITMO-IS-Algorithms-and-Data-Structures-2nd-semester-summary
 Graphs and strings, конспект на Русском, код нет.<br>
 Конспект чисто для себя, поэтому некоторые простые объяснения
 (DFS, BFS, TPS) опущены.
