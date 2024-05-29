@@ -16,3 +16,7 @@ add_library(kun kun.cpp)
 add_library(ford_fulkerson ford_fulkerson.cpp)
 add_library(edmonds_karp edmonds_karp.cpp)
 add_library(bridges_ap bridges_ap.cpp)
+
+add_library(rabin_karp rabin_karp.cpp)
+add_library(prefix_function prefix_function.cpp)
+add_library(z_function z_function.cpp)
