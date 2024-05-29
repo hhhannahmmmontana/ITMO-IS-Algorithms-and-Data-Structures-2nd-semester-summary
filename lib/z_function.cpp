@@ -5,7 +5,7 @@ std::vector<unsigned long> Create(const std::string& str) {
     z[0] = str.size();
     unsigned long left = 0, right = 0;
     for (int i = 1; i < str.size(); ++i) {
-        z[i] = std::max(right - i, z[i - left]);
+        z[i] = std::min((unsigned long)(((int)right - (int)i) * ((int)right - (int)i) > 0), z[i - left]);
         while (i + z[i] < str.size() && str[z[i]] == str[i + z[i]]) {
             ++z[i];
         }
